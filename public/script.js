@@ -30,7 +30,7 @@ navigator.mediaDevices.getUserMedia({
     })
   })
   .catch(error =>{
-    const warning = document.querySelector('.warning');
+    const warning = document.getElementById('warning');
     warning.innerText = 'Your webcam is dead, go ahead to get a new MBP!';
     console.log('Your webcam is dead, go ahead to get a new MBP!')
   })
