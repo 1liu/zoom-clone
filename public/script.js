@@ -29,6 +29,9 @@ navigator.mediaDevices.getUserMedia({
       connectToNewUser(userId, stream);
     })
   })
+  .catch(error =>{
+    console.log('Your webcam is dead, go ahead to get a new MBP!')
+  })
 
 socket.on('user-disconnected', userid => {
   if (peers[userid]) peers[userid].close();
